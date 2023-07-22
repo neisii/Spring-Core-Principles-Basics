@@ -22,7 +22,7 @@ public class AppConfig { // 실제 동작에 필요한 *구현 객체를 생성�
     return new OrderServiceImpl(memberRepository(), discountPolicy());
   }
 
-  private static FixDiscountPolicy discountPolicy() {
+  private static DiscountPolicy discountPolicy() {
     return new FixDiscountPolicy(); // 적용할 할인 정책
   }
 
