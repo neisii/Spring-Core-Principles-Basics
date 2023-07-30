@@ -12,5 +12,8 @@
         * 가입/조회
         * 회원 등급 일반/VIP
         * 자체 DB 구축 또는 외부 시스템 연동할 지 미정
-  * 클라이언트 - 회원 서비스 - 회원 저장소(메모비, DB, 외부 연동)
+  * 클라이언트 - 회원 서비스 - 회원 저장소(메모리, DB, 외부 연동)
   * <interface>MemberService MemberServiceImpl
+
+# BeanFactory와 ApplicationContext
+* BeanFactory `<` ApplicationContext
