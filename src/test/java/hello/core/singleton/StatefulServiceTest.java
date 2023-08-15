@@ -18,16 +18,17 @@ class StatefulServiceTest {
     StatefulService statefulService2 = ac.getBean(StatefulService.class);
 
     // when
-    statefulService1.order("userA", 10000);
-    statefulService2.order("userB", 20000);
+    int userAPrice = statefulService1.order("userA", 10000);
+    int userBPrice = statefulService2.order("userB", 20000);
 
     // ThreadA: 사용자 A 주문 금액 조회
-    int price1 = statefulService1.getPrice();
-    System.out.println(price1);
+//    int price1 = statefulService1.getPrice();
+    System.out.println(userAPrice);
+    System.out.println(userBPrice);
 
     // then
     // 주의! 싱글톤 객체이기 때문에 마지막 주문 금액이 나온다.
-    Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
+    Assertions.assertThat(userAPrice).isEqualTo(10000);
   }
 
 
