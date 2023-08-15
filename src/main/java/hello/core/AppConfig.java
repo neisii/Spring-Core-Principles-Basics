@@ -16,17 +16,20 @@ public class AppConfig { // 실제 동작에 필요한 *구현 객체를 생성�
 
   @Bean
   public MemberService memberService() { // 생성자를 통해 주입(Injection)
+    System.out.println("Call AppConfig.memberService");
     return new MemberServiceImpl(memberRepository());
   }
 
   @Bean
   public MemoryMemberRepository memberRepository() {
+    System.out.println("Call AppConfig.memberRepository");
     return new MemoryMemberRepository(); // 저장소 선택
   }
 
   @Bean
   public OrderService orderService() {
-    return new OrderServiceImpl(memberRepository(), discountPolicy());
+    System.out.println("Call AppConfig.orderService");
+  return new OrderServiceImpl(memberRepository(), discountPolicy());
   }
 
   @Bean

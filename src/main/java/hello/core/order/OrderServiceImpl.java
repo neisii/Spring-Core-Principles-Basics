@@ -5,7 +5,6 @@ import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 
 public class OrderServiceImpl implements OrderService { // 배우2
-
   private final MemberRepository memberRepository; // 인터페이스에만 의존하도록 변경
   private final DiscountPolicy discountPolicy; // 인터페이스에만 의존하도록 변경
 
@@ -21,4 +20,9 @@ public class OrderServiceImpl implements OrderService { // 배우2
 
     return new Order(memberId, itemName, itemPrice, discountPrice);
   }
+
+  public MemberRepository getMemberRepository() {
+    return memberRepository;
+  }
+
 }
