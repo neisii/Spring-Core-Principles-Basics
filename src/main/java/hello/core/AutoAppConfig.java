@@ -18,9 +18,9 @@ public class AutoAppConfig {
   // 똑같은 이름으로 빈을 중복 선언 하면? 수동 등록 빈이 자동 등록 빈을 오버라이딩 한다.
   // 부트 서버 기동 시 기본 값은 오버라이딩 하지 않고 "오류 발생 시킴"
   // The bean 'memoryMemberRepository', defined in class path resource [hello/core/AutoAppConfig.class], could not be registered. A bean with that name has already been defined in file [out\production\classes\hello\core\member\MemoryMemberRepository.class] and overriding is disabled.
-  @Bean(name = "memoryMemberRepository")
-  MemberRepository memberRepository() {
-    return new MemoryMemberRepository();
-  }
+//  @Bean(name = "memoryMemberRepository")
+//  MemberRepository memberRepository() {
+//    return new MemoryMemberRepository();
+//  }
 
 }
